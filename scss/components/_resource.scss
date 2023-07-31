@@ -1,0 +1,24 @@
+.resources {
+  margin-bottom: 5px;
+  align-items: baseline;
+
+  .resource {
+    flex: auto;
+    align-items: baseline;
+    *{
+      flex: auto;
+    }
+  }
+}
+
+.resource {
+  .resource-label {
+    font-weight: bold;
+  }
+  .resource-content{
+    display: inline;
+  }
+  input {
+    display: inline;
+  }
+}

@@ -1,0 +1,79 @@
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'MYSYSTEM.ActorName'}}"/></h1>
+
+      <div class="resources flexrow">
+        <div class="resource">
+          <label for="system.infirmity" class="resource-label">{{localize 'MYSYSTEM.Infirmity'}}: </label>
+          <input type="number" name="system.infirmity" value="{{system.infirmity}}" data-dtype="Number"/>
+        </div>
+        <div class="resource">
+          <label for="system.stress" class="resource-label check" data-type="embarrassment">{{localize 'MYSYSTEM.Stress'}}: </label>
+          <input type="number" name="system.stress" value="{{system.stress}}" data-dtype="Number"/>
+        </div>
+      </div>
+      <hr/>
+
+      <div class="resources flexrow">
+        <div class="resource">
+          <label for="system.strenght" class="resource-label check" data-type="embarrassment">{{localize 'MYSYSTEM.Strenght'}}: </label>
+          <input type="number" name="system.strenght" value="{{system.strenght}}" data-dtype="Number"/>
+        </div>
+
+        <div class="resource">
+          <label for="system.agility" class="resource-label check" data-type="embarrassment">{{localize 'MYSYSTEM.Agility'}}: </label>
+          <input type="number" name="system.agility" value="{{system.agility}}" data-dtype="Number"/>
+        </div>
+      </div>
+
+      <div class="resources flexrow">
+        <div class="resource">
+          <label for="system.faith" class="resource-label check" data-type="embarrassment">{{localize 'MYSYSTEM.Faith'}}: </label>
+          <input type="number" name="system.faith" value="{{system.faith}}" data-dtype="Number"/>
+        </div>
+
+        <div class="resource">
+          <label for="system.subterfuge" class="resource-label check" data-type="embarrassment">{{localize 'MYSYSTEM.Subterfuge'}}: </label>
+          <input type="number" name="system.subterfuge" value="{{system.subterfuge}}" data-dtype="Number"/>
+        </div>
+
+        <div class="resource">
+          <label for="system.occultism" class="resource-label check" data-type="embarrassment">{{localize 'MYSYSTEM.Occultism'}}: </label>
+          <input type="number" name="system.occultism" value="{{system.occultism}}" data-dtype="Number"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- General Tab --}}
+    <div class="tab general">
+      <div class="grid grid-2col">
+        <div class="appearance">
+            <h2>{{localize 'ARCHETERICALITE.Appearance'}}</h2>
+            {{editor system.description.appearance target="system.description.appearance" button=true owner=owner editable=editable}}
+        </div>
+        <div class="general-information">
+            <h2>{{localize 'ARCHETERICALITE.GeneralInformation'}}</h2>
+            {{editor enrichedGeneral target="system.description.general" button=true owner=owner editable=editable}}
+        </div>
+        <div>
+            <h2>{{localize 'ARCHETERICALITE.Notes'}}</h2>
+            {{editor enrichedNotes target="system.description.notes" button=true owner=owner editable=editable}}
+        </div>
+        <div class="biography">
+            <h2>{{localize 'ARCHETERICALITE.Biography'}}</h2>
+            {{editor enrichedBiography target="system.description.biography" button=true owner=owner editable=editable}}
+        </div>
+      </div>
+    </div>
+
+  </section>
+</form>
+

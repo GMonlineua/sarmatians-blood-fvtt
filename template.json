@@ -1,0 +1,34 @@
+{
+  "Actor": {
+    "types": ["character", "npc"],
+    "templates": {
+      "base": {
+        "stress": 0,
+        "infirmity": 0,
+        "description": {
+          "appearance": "",
+          "general": "",
+          "notes": "",
+          "biography": ""
+        }
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "attributes": {
+        "strenght": 0,
+        "agility": 0,
+        "faith": 0,
+        "subterfuge": 0,
+        "occultism": 0
+      }
+    },
+    "npc": {
+      "templates": ["base"]
+    }
+  },
+  "Item": {
+    "types": [],
+    "templates": {}
+  }
+}

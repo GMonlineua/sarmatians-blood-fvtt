@@ -1,0 +1,26 @@
+.window-app {
+  font-family: $font-primary;
+}
+
+.window-content {
+  input[type="number"] {
+    max-width: 35px;
+  }
+
+  input[type="text"] {
+    width: auto;
+  }
+}
+
+.mysystem.sheet.actor {
+  min-width: 550px;
+  min-height: 500px;
+}
+
+.tox {
+  min-height: 300px;
+}
+
+.editor {
+  min-height: 200px;
+}
