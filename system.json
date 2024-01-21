@@ -1,8 +1,8 @@
 {
-  "id": "mysystem",
-  "title": "The Old Rat",
-  "description": "The Old Rat | Стара Щуриха",
-  "version": "0.1",
+  "id": "blank",
+  "title": "Blank System",
+  "description": "Blank System from GMonline",
+  "version": "1.0",
   "compatibility": {
     "minimum": "11",
     "verified": "11",
@@ -16,10 +16,10 @@
     }
   ],
   "esmodules": [
-    "module/mysystem.mjs"
+    "module/esmodules.mjs"
   ],
   "styles": [
-    "css/mysystem.css"
+    "css/style.css"
   ],
   "languages": [
     {
@@ -35,7 +35,12 @@
       "flags": {}
     }
   ],
-  "initiative": "2d6",
+  "initiative": "1d6",
   "gridDistance": 1,
-  "gridUnits": "m"
+  "gridUnits": "m",
+  "url": "https://github.com/GMonlineua/Blank_System",
+  "manifest": "https://raw.githubusercontent.com/GMonlineua/Blank_System/master/system.json",
+  "download": "https://codeload.github.com/GMonlineua/Blank_System/zip/refs/heads/master",
+  "license": "https://github.com/GMonlineua/Blank_System/blob/master/LICENSE.md",
+  "changelog": "https://github.com/GMonlineua/Blank_System/blob/master/CHANGELOG.md"
 }

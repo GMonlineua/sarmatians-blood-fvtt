@@ -1,29 +1,24 @@
 {
-  "TYPES.Actor.character": "Персонаж Гравця",
-  "TYPES.Actor.npc": "Неігровий Персонаж",
+  "TYPES": {
+    "Actor": {
+      "character": "Персонаж Гравця"
+    },
+    "Item": {
+      "item": "Елемент"
+    }
+  },
 
-  "MYSYSTEM.ActorName": "Ім'я",
-  "MYSYSTEM.ItemName": "Назва",
+  "BLANK": {
+    "ActorName": "Ім'я",
+    "ItemName": "Назва",
 
-  "MYSYSTEM.Test": "Тест",
-  "MYSYSTEM.Modifier": "Модифікатор",
-  "MYSYSTEM.Roll": "Кинути",
-  "MYSYSTEM.RollCancel": "Скасувати",
-  "MYSYSTEM.Success": "Успіх",
-  "MYSYSTEM.Fail": "Провал",
-  "MYSYSTEM.Panic": "Паніка",
-  "MYSYSTEM.InfirmityZeroSum": "Персонаж Непритомніє",
+    "Description": "Опис",
+    "Notes": "Нотатки",
 
-  "MYSYSTEM.Stress": "Стрес",
-  "MYSYSTEM.Infirmity": "Неміч",
-  "MYSYSTEM.Strenght": "Сила",
-  "MYSYSTEM.Agility": "Спритність",
-  "MYSYSTEM.Faith": "Віра",
-  "MYSYSTEM.Subterfuge": "Хитрість",
-  "MYSYSTEM.Occultism": "Окультність",
-
-  "MYSYSTEM.Appearance": "Зовнішній Вигляд",
-  "MYSYSTEM.GeneralInformation": "Загальні Відомості",
-  "MYSYSTEM.Notes": "Нотатки",
-  "MYSYSTEM.Biography": "Біографія"
+    "ItemShow": "Показати",
+    "ItemAdd": "Додати",
+    "ItemDelete": "Видалити",
+    "ItemEdit": "Редагувати",
+    "NewItem": "Новий"
+  }
 }

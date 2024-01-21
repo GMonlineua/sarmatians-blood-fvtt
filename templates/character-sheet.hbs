@@ -1,0 +1,18 @@
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+    <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+    <div class="description-block">
+      <h2>{{localize 'BLANK.Description'}}</h2>
+      {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+    </div>
+  </header>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+    <hr>
+    <h2>{{localize 'BLANK.Notes'}}</h2>
+    {{editor system.notes target="system.notes" button=true owner=owner editable=editable}}
+  </section>
+</form>

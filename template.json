@@ -1,34 +1,26 @@
 {
-  "Actor": {
-    "types": ["character", "npc"],
+  "Actor":
+  {
+    "types": ["character"],
     "templates": {
       "base": {
-        "stress": 0,
-        "infirmity": 0,
-        "description": {
-          "appearance": "",
-          "general": "",
-          "notes": "",
-          "biography": ""
-        }
+        "description": "",
+        "notes": ""
       }
     },
     "character": {
-      "templates": ["base"],
-      "attributes": {
-        "strenght": 0,
-        "agility": 0,
-        "faith": 0,
-        "subterfuge": 0,
-        "occultism": 0
-      }
-    },
-    "npc": {
       "templates": ["base"]
     }
   },
   "Item": {
-    "types": [],
-    "templates": {}
+    "types": ["item"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "item": {
+      "templates": ["base"]
+    }
   }
 }
