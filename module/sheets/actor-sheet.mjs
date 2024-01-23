@@ -100,6 +100,21 @@ export class BlankActorSheet extends ActorSheet
       return item.delete();
     });
 
+    // Rollable abilities.
+    html.find('.rollable').click(this._onRoll.bind(this));
+
+    // Show item summary.
+    html.find('.item-name').click(ev => {
+      const button = ev.currentTarget;
+      const li = button.closest(".item");
+      const summary = li.getElementsByClassName("item-summary")[0];
+      if (summary) {
+        const contentHeight = summary.scrollHeight;
+        summary.style.height = summary.classList.contains("active") ? "0" : `${contentHeight}px`;
+        summary.classList.toggle("active");
+      }
+    });
+
     // Drag events for macros.
     if (this.actor.isOwner) {
       let handler = ev => this._onDragStart(ev);
@@ -125,7 +140,7 @@ export class BlankActorSheet extends ActorSheet
     const header = event.currentTarget;
     const type = header.dataset.type;
     const data = duplicate(header.dataset);
-    const name = game.i18n.localize("ROGUE.NewItem");
+    const name = game.i18n.localize("TYPES.Item.item");
     // Prepare the item object.
     const itemData = {
       name: name,
@@ -137,5 +152,42 @@ export class BlankActorSheet extends ActorSheet
 
     const cls = getDocumentClass("Item");
     return cls.create(itemData, {parent: this.actor});    
+  }
+
+  /**
+   * Handle clickable rolls.
+   * @param {Event} event   The originating click event
+   * @private
+   */
+  _onRoll(event) {
+    event.preventDefault();
+    const element = event.currentTarget;
+    const dataset = element.dataset;
+
+    // Handle item rolls.
+    if (dataset.rollType) {
+      if (dataset.rollType == 'item') {
+        const itemId = element.closest('.item').dataset.itemId;
+        const item = this.actor.items.get(itemId);
+        if (item) return item.roll();
+
+      } else if (dataset.rollType == 'show') {
+        const itemId = element.closest('.item').dataset.itemId;
+        const item = this.actor.items.get(itemId);
+        if (item) return item.show();
+
+      }
+    }
+
+    // Handle rolls that supply the formula directly.
+    if (dataset.roll) {
+      let roll = new Roll(dataset.roll, this.actor.getRollData());
+      roll.toMessage({
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        flavor: label,
+        rollMode: game.settings.get('core', 'rollMode')
+      });
+      return roll;
+    }
   }
 }

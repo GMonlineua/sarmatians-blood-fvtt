@@ -20,7 +20,8 @@
       }
     },
     "item": {
-      "templates": ["base"]
+      "templates": ["base"],
+      "formula": ""
     }
   }
 }

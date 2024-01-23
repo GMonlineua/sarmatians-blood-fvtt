@@ -36,13 +36,23 @@
 }
 
 .sheet-body {
+  .items-block {
+    position: relative;
+
+    .item-add {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
   .grid {
     gap: 10px;
   }
 
   .editor {
     min-height: 75px;
-    height: calc(100% - 28px);
+    height: 250px;
     padding: 0 $padding-sm;
     border: $border;
   }

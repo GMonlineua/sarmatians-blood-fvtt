@@ -12,6 +12,30 @@
   {{!-- Sheet Body --}}
   <section class="sheet-body">
     <hr>
+    <div class="items-block">
+      <div class="item-header">
+        <h3>{{localize 'TYPES.Item.item'}}</h3>
+        <a class="item-add item-create" title="{{localize 'BLANK.ItemAdd'}}" data-type="item"><i class="fas fa-plus"></i>{{localize 'BLANK.ItemAdd'}}</a>
+      </div>
+      <ol class="items-list">
+        {{#each item as |item id|}}
+          <li class="item {{item.type}}" data-item-id="{{item._id}}">
+            <div class="item-info flexrow">
+              <a class="item-image rollable" data-roll-type="item" style="background-image: url({{item.img}})"></a>
+              <h4 class="item-name">{{item.name}}</h4>
+            </div>
+            <div class="item-summary">
+              {{{item.system.description}}}
+            </div>
+            <div class="item-controls">
+              <a class="item-control rollable" data-roll-type="show" title="{{localize 'ROGUE.ItemShow'}}"><i class="fa fa-comment"></i></a>
+              <a class="item-control item-edit" title="{{localize 'BLANK.ItemEdit'}}"><i class="fas fa-edit"></i></a>
+              <a class="item-control item-delete" title="{{localize 'BLANK.ItemDelete'}}"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+        {{/each}}
+      </ol>
+    </div>
     <h2>{{localize 'BLANK.Notes'}}</h2>
     {{editor system.notes target="system.notes" button=true owner=owner editable=editable}}
   </section>

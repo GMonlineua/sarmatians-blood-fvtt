@@ -249,6 +249,11 @@ input.clear-input:focus {
 }
 
 /* Styles limited to system sheets */
+.blank {
+  /* ----------------------------------------- */
+  /*  Items Lists                              */
+  /* ----------------------------------------- */
+}
 .blank .sheet-header {
   flex: 0 auto;
   overflow: hidden;
@@ -282,12 +287,20 @@ input.clear-input:focus {
 .blank .sheet-header .description-block {
   flex: 2;
 }
+.blank .sheet-body .items-block {
+  position: relative;
+}
+.blank .sheet-body .items-block .item-add {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 .blank .sheet-body .grid {
   gap: 10px;
 }
 .blank .sheet-body .editor {
   min-height: 75px;
-  height: calc(100% - 28px);
+  height: 250px;
   padding: 0 5px;
   border: 1px solid #b5b3a4;
 }
@@ -329,11 +342,76 @@ input.clear-input:focus {
   height: 100%;
   margin: 0;
 }
+.blank .sheet-body .formula {
+  margin-top: 5px;
+  width: 100%;
+}
 .blank .sheet-body .editor-block {
   flex: auto;
 }
 .blank .sheet-body .editor-block .editor {
   min-height: 200px;
+}
+.blank .items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #444;
+}
+.blank .items-list .item {
+  position: relative;
+  align-items: center;
+  background-color: rgba(165, 154, 132, 0.3);
+  margin-bottom: 5px;
+}
+.blank .items-list .item .item-image {
+  flex: 0 0 30px;
+  height: 30px;
+  min-width: 30;
+  background-size: 27px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  transition: 0.5s ease;
+}
+.blank .items-list .item:hover .item-image {
+  background-image: url("/icons/svg/d20-grey.svg") !important;
+}
+.blank .items-list .item .item-image:hover {
+  background-image: url("/icons/svg/d20-black.svg") !important;
+}
+.blank .items-list .item .item-name {
+  flex: 2;
+  margin: 0;
+  overflow: hidden;
+  height: 30px;
+  padding: 6px 0;
+  cursor: pointer;
+}
+.blank .items-list .item .item-name:hover {
+  text-shadow: 0 0 8px red;
+}
+.blank .items-list .item .item-summary {
+  flex: auto;
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.blank .items-list .item .item-summary p {
+  margin: 0.5em;
+}
+.blank .items-list .item .item-controls {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.blank .items-list .item .item-controls a {
+  font-size: 12px;
+  text-align: center;
+  margin: 0 6px;
 }
 
 /*# sourceMappingURL=style.css.map */
