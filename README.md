@@ -19,7 +19,7 @@
 [Foundry URL]: https://foundryvtt.com
 
 [Version]: https://img.shields.io/badge/Version-1.1-orange?style=flat-square
-[Version URL]: https://github.com/GMonlineua/Foundry_Rogue
+[Version URL]: https://github.com/GMonlineua/Blank_System/
 
 [GNU License]: https://img.shields.io/badge/License-GNU-green?style=flat-square
-[GNU URL]: https://github.com/GMonlineua/Foundry_Rogue/blob/master/LICENSE.md
+[GNU URL]: https://github.com/GMonlineua/Blank_System/blob/master/LICENSE.md
