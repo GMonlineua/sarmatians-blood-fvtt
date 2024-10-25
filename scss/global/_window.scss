@@ -13,6 +13,11 @@ input.clear-input:focus {
   outline: none;
 }
 
+select.clear-select {
+  border: none;
+  background: none;
+}
+
 .window-app {
   font-family: $font-primary;
 }
@@ -22,32 +27,17 @@ input.clear-input:focus {
     max-width: 35px;
   }
 
-  input[type="number"].long-n-input {
-    max-width: 50px;
-  }
-
   input[type="text"] {
     width: auto;
   }
 }
 
 .blank.sheet.actor {
-  min-width: 550px;
-  min-height: 500px;
+  min-width: 400px;
+  min-height: 375px;
 }
 
-.rollable {
-  &:hover,
-  &:focus {
-    color: #000;
-    cursor: pointer;
-  }
-}
-
-.tox {
-  min-height: 300px;
-}
-
-.editor {
-  min-height: 200px;
+.blank.sheet.item {
+  min-width: 450px;
+  min-height: 400px;
 }

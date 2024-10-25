@@ -1,7 +1,7 @@
 {
   "TYPES": {
     "Actor": {
-      "character": "Персонаж Гравця"
+      "character": "Персонаж"
     },
     "Item": {
       "item": "Елемент"
@@ -9,16 +9,19 @@
   },
 
   "BLANK": {
-    "ActorName": "Ім'я",
-    "ItemName": "Назва",
+    "Actor": {
+      "Name": "Ім'я"
+    },
+    "Item": {
+      "Name": "Назва",
+      "Show": "Показати",
+      "Add": "Додати",
+      "Delete": "Видалити",
+      "Edit": "Редагувати",
+      "New": "Новий"
+    },
 
     "Description": "Опис",
-    "Notes": "Нотатки",
-
-    "ItemShow": "Показати",
-    "ItemAdd": "Додати",
-    "ItemDelete": "Видалити",
-    "ItemEdit": "Редагувати",
-    "NewItem": "Новий"
+    "Notes": "Нотатки"
   }
 }

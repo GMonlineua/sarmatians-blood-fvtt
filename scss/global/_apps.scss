@@ -3,3 +3,24 @@
   border-width: 0;
   margin-right: 5px;
 }
+
+.roll-message {
+  .roll-header {
+    margin-bottom: 10px;
+
+    .roll-name {
+      margin: 0;
+      padding: 3px 5px 0 5px;
+    }
+
+    .roll-subheader {
+      padding: 3px 5px 0 5px;
+      font-weight: bold;
+
+      h4 {
+        display: inline;
+        font-weight: bold;
+      }
+    }
+  }
+}

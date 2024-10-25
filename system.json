@@ -1,18 +1,19 @@
 {
   "id": "blank",
   "title": "Blank System",
-  "description": "Blank System from GMonline",
-  "version": "1.1",
+  "description": "Blank game system by GMonline",
+  "version": "1.2",
   "compatibility": {
     "minimum": "11",
-    "verified": "11",
-    "maximum": "11"
+    "verified": "12",
+    "maximum": "12"
   },
   "authors": [
     {
       "name": "GMonline-ua",
       "url": "https://github.com/GMonlineua",
-      "flags": {}
+      "email": "gmonlineua@gmail.com",
+      "discord": "vlad_dracula"
     }
   ],
   "esmodules": [
@@ -25,21 +26,17 @@
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json",
-      "flags": {}
+      "path": "lang/en.json"
     },
     {
       "lang": "uk",
       "name": "Українська",
-      "path": "lang/uk.json",
-      "flags": {}
+      "path": "lang/uk.json"
     }
   ],
-  "initiative": "1d6",
-  "gridDistance": 1,
-  "gridUnits": "m",
-  "url": "https://github.com/GMonlineua/Blank_System",
-  "manifest": "https://raw.githubusercontent.com/GMonlineua/Blank_System/master/system.json",
-  "download": "https://codeload.github.com/GMonlineua/Blank_System/zip/refs/heads/master",
-  "license": "https://github.com/GMonlineua/Blank_System/blob/master/LICENSE.md"
+  "socket": true,
+  "url": "https://github.com/GMonlineua/blank-system-fvtt",
+  "manifest": "https://raw.githubusercontent.com/GMonlineua/blank-system-fvtt/main/system.json",
+  "download": "https://github.com/GMonlineua/blank-system-fvtt/zip/refs/heads/main",
+  "license": "https://github.com/GMonlineua/blank-system-fvtt/blob/main/LICENSE.md"
 }

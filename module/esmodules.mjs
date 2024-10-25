@@ -1,9 +1,12 @@
-// Import Modules
+// Import Actor Sheet
 import { BlankActor } from "./documents/actor.mjs";
 import { BlankActorSheet } from "./sheets/actor-sheet.mjs";
 import { BlankItem } from "./documents/item.mjs";
 import { BlankItemSheet } from "./sheets/item-sheet.mjs";
-import { preprocessChatMessage, renderChatMessage } from "./helpers/chat-portraits.mjs";
+
+// Helpers
+import { preprocessChatMessage, renderChatMessage } from "./applications/chat-portraits.mjs";
+import { registerHandlebarsHelpers } from "./helpers/handlebars-helpers.mjs";
 
 Hooks.once('init', async function() {
 
@@ -12,45 +15,22 @@ Hooks.once('init', async function() {
     BlankItem
   };
 
-  // Define custom Entity classes
+  // Define custom Entity classes and Data Models
   CONFIG.Actor.documentClass = BlankActor;
   CONFIG.Item.documentClass = BlankItem;
+
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("blank", BlankActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("blank", BlankItemSheet, { makeDefault: true });
+
+  registerHandlebarsHelpers();
 });
-
-
-/* -------------------------------------------- */
-/*  Chat Message                   */
-/* -------------------------------------------- */
 
 // Preprocess chat message before it is created hook
 Hooks.on("preCreateChatMessage", preprocessChatMessage);
 
 // Render chat message hook
 Hooks.on("renderChatMessage", renderChatMessage);
-
-
-/* -------------------------------------------- */
-/*  Handlebars Helpers                          */
-/* -------------------------------------------- */
-
-Handlebars.registerHelper("load", function(data) {
-  let load = game.i18n.localize("ROGUE.Unloaded");
-  if (data.free >= 5) {
-    load = game.i18n.localize("ROGUE.Unloaded")
-  } else if (data.free >= 2 && data.free < 5) {
-    load = game.i18n.localize("ROGUE.LightlyLoaded")
-  } else if (data.free >= 0 && data.free < 2) {
-    load = game.i18n.localize("ROGUE.HeavilyLoaded")
-  } else if (data.free >= -2 && data.free < 0) {
-    load = game.i18n.localize("ROGUE.Overloaded")
-  } else {
-    load = game.i18n.localize("ROGUE.MoveBlocked")
-  }
-  return load;
-});

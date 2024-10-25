@@ -1,11 +1,10 @@
 {
-  "Actor":
-  {
+  "Actor": {
     "types": ["character"],
+    "htmlFields": ["description"],
     "templates": {
       "base": {
-        "description": "",
-        "notes": ""
+        "description": ""
       }
     },
     "character": {
@@ -20,8 +19,7 @@
       }
     },
     "item": {
-      "templates": ["base"],
-      "formula": ""
+      "templates": ["base"]
     }
   }
 }

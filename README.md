@@ -1,25 +1,24 @@
-# Blank System
+# Blades in the Dark for Foundry VTT
 
-[![Foundry Shield 11]][Foundry URL]
+[![Foundry Shield]][Foundry URL]
 [![Version]][Version URL]
 [![GNU License]][GNU URL]
 
-Це зроблена для [Foundry Virtual Tabletop](http://foundryvtt.com) пуста система. Чаркуші мають тільки опис і нотатки, що дає можливість записати все що потрібно для малих систем.
+Small universal template for other systems.
 
-## Встановлення
-Щоб встановити цю систему:
-1.  Усередині екрану "Configuration and Setup" лаучера натисніть "Systems".
-2.  Натисніть "Install System".
-3.  В полі "Manifest URL" вставте наступне посилання: `https://raw.githubusercontent.com/GMonlineua/Blank_System/master/system.json`.
-4.  Натисніть 'Install' і дочекайтеся завершення встановлення.
+## Install
 
-Тепер ви можете створити світ з цією системою і використовувати аркуші персонажів та компендіуми для неї у Foundry VTT!
+To install a module, follow these instructions:
 
-[Foundry Shield 11]: https://img.shields.io/badge/Foundry-11-informational?style=flat-square
+1. Start FVTT and browse to the Game Modules tab in the Configuration and Setup menu
+2. Select the Install Module button and enter the following URL: `https://raw.githubusercontent.com/GMonlineua/blank-system-fvtt/main/system.json`
+3. Click Install and wait for installation to complete
+
+[Foundry Shield]: https://img.shields.io/badge/Foundry-12-informational?style=flat-square
 [Foundry URL]: https://foundryvtt.com
 
-[Version]: https://img.shields.io/badge/Version-1.1-orange?style=flat-square
-[Version URL]: https://github.com/GMonlineua/Blank_System/
+[Version]: https://img.shields.io/badge/Version-1.2-orange?style=flat-square
+[Version URL]: https://github.com/GMonlineua/blades-in-the-dark-fvtt
 
 [GNU License]: https://img.shields.io/badge/License-GNU-green?style=flat-square
-[GNU URL]: https://github.com/GMonlineua/Blank_System/blob/master/LICENSE.md
+[GNU URL]: https://github.com/GMonlineua/blades-in-the-dark-fvtt/blob/main/LICENSE.md

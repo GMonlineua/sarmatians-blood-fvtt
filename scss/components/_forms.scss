@@ -1,0 +1,53 @@
+.detail-window {
+  .detail-trigger {
+    cursor: pointer;
+  }
+
+  .detail-block:not(.active) {
+    display: none;
+  }
+}
+
+.rollable {
+  &:hover,
+  &:focus {
+    color: black;
+    cursor: pointer;
+  }
+}
+
+h1,h2,h3 {
+  font-family: $font-secondary;
+}
+
+.sheet-tabs {
+  font-family: $font-secondary;
+  font-size: medium;
+
+  .item.active {
+    background: $dark-paper;
+    text-shadow: none;
+  }
+}
+
+.window-content {
+  background: $background-paper;
+}
+
+.tox {
+  min-height: 300px;
+
+  .tox-editor-container {
+    background: white;
+  }
+
+  .tox-edit-area {
+    padding: 0 $padding-sm;
+  }
+}
+
+.editor {
+  min-height: 200px;
+  padding: 0 $padding-sm;
+  border: $border;
+}

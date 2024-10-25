@@ -4,14 +4,16 @@
  */
 export class BlankActor extends Actor {
 
-  /** @override */
-  prepareData() {
-    super.prepareData();
-  }
+  /** @inheritdoc */
+  async _preCreate(data, options, user) {
+    await super._preCreate(data, options, user);
 
-  /** @override*/
-  prepareDerivedData() {
-    const actorData = this;
-    const systemData = actorData.system;
+    const prototypeToken = {
+      actorLink: true,
+      disposition: CONST.TOKEN_DISPOSITIONS.FRIENDLY,
+      displayName: CONST.TOKEN_DISPLAY_MODES.ALWAYS
+    }
+
+    this.updateSource({ prototypeToken });
   }
 }
