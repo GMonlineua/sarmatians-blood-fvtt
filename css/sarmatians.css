@@ -365,10 +365,8 @@ select.clear-select {
 }
 .sarmatians-blood.item .items-header {
   flex: 100px auto;
-  overflow: hidden;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: flex-start;
   margin-bottom: 10px;
 }
@@ -392,9 +390,6 @@ select.clear-select {
   width: 100%;
   height: 100%;
   margin: 0;
-}
-.sarmatians-blood.item .items-header .header-fields .brief-info {
-  margin-top: 10px;
 }
 .sarmatians-blood.item .sheet-body .editor-block {
   flex: auto;

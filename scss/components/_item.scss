@@ -4,10 +4,8 @@ input.all-width {
 
 .items-header {
   flex: 100px auto;
-  overflow: hidden;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: flex-start;
   margin-bottom: 10px;
 
@@ -32,10 +30,6 @@ input.all-width {
         height: 100%;
         margin: 0;
       }
-    }
-
-    .brief-info {
-      margin-top: 10px;
     }
   }
 }

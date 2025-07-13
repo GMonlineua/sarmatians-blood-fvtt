@@ -18,7 +18,6 @@ export class SarmatiansItem extends Item {
 
     const renderData = {
       name: item.name,
-      type: game.i18n.localize("TYPES.Item." + item.type),
       description: item.system.description
     };
 
