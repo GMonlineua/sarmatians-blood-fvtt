@@ -28,7 +28,7 @@ export default class SarmatiansRollerApp extends HandlebarsApplicationMixin(Appl
 
   static PARTS = {
     form: {
-      template: "systems/sarmatins-blood/templates/apps/rollDialog.hbs"
+      template: "systems/sarmatians-blood/templates/apps/rollDialog.hbs"
     }
   }
 
@@ -39,11 +39,10 @@ export default class SarmatiansRollerApp extends HandlebarsApplicationMixin(Appl
       game.user.character ??
       (canvas.ready ? canvas.tokens.controlled[0]?.actor : null) ??
       null;
-    this.rollConfig = { ...CONFIG.BITD.rolls };
   }
 
   get title() {
-    return game.i18n.localize("BITD.Roll.Title");
+    return game.i18n.localize("SARMATIANS.Roll.Title");
   }
 
   /**
@@ -74,7 +73,8 @@ export default class SarmatiansRollerApp extends HandlebarsApplicationMixin(Appl
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    const formula = "2d6+" + formData.modifier;
+    const formula = "2d6+" + data.modifier;
+    console.log(formula)
     const rollResult = new Roll(formula);
     await rollResult.evaluate();
     rollResult.toMessage();

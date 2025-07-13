@@ -256,101 +256,114 @@ select.clear-select {
 }
 
 /* Styles limited to system sheets */
-.blank {
+.sarmatians-blood {
   font-family: "Lora", serif;
 }
-.blank .detail-window .detail-trigger {
+.sarmatians-blood .detail-window .detail-trigger {
   cursor: pointer;
 }
-.blank .detail-window .detail-block:not(.active) {
+.sarmatians-blood .detail-window .detail-block:not(.active) {
   display: none;
 }
-.blank .rollable:hover, .blank .rollable:focus {
+.sarmatians-blood .rollable:hover, .sarmatians-blood .rollable:focus {
   color: black;
   cursor: pointer;
 }
-.blank h1, .blank h2, .blank h3 {
+.sarmatians-blood h1, .sarmatians-blood h2, .sarmatians-blood h3 {
   font-family: "Spectral SC", serif;
 }
-.blank .sheet-tabs {
+.sarmatians-blood .sheet-tabs {
   font-family: "Spectral SC", serif;
   font-size: medium;
 }
-.blank .sheet-tabs .item.active {
+.sarmatians-blood .sheet-tabs .item.active {
   background: rgba(0, 0, 0, 0.1);
   text-shadow: none;
 }
-.blank .window-content {
-  background: url("../ui/white-parchment.jpg") repeat;
-}
-.blank .tox {
+.sarmatians-blood .tox {
   min-height: 300px;
 }
-.blank .tox .tox-editor-container {
+.sarmatians-blood .tox .tox-editor-container {
   background: white;
 }
-.blank .tox .tox-edit-area {
+.sarmatians-blood .tox .tox-edit-area {
   padding: 0 5px;
 }
-.blank .editor {
+.sarmatians-blood .editor {
   min-height: 200px;
   padding: 0 5px;
   border: 1px solid #b5b3a4;
 }
-.blank .items-block {
+.sarmatians-blood .items-block {
   position: relative;
 }
-.blank .items-block .item-create {
+.sarmatians-blood .items-block .item-create {
   position: absolute;
   top: 2px;
   right: 5px;
 }
-.blank .items-block .items-list {
+.sarmatians-blood .items-block .items-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.blank .items-block .items-list .item {
+.sarmatians-blood .items-block .items-list .item {
   position: relative;
   align-items: center;
   margin-bottom: 5px;
 }
-.blank .items-block .items-list .item .item-description {
+.sarmatians-blood .items-block .items-list .item .item-description {
   padding-right: 55px;
 }
-.blank .items-block .items-list .item .item-description .item-name.active {
+.sarmatians-blood .items-block .items-list .item .item-description .item-name.active {
   font-weight: bold;
 }
-.blank .items-block .items-list .item .item-description .item-tags {
+.sarmatians-blood .items-block .items-list .item .item-description .item-tags {
   font-style: italic;
 }
-.blank .items-block .items-list .item .item-summary {
+.sarmatians-blood .items-block .items-list .item .item-summary {
   flex: auto;
   margin: 0;
   height: 0;
   overflow: hidden;
   transition: height 0.3s ease;
 }
-.blank .items-block .items-list .item .item-controls {
+.sarmatians-blood .items-block .items-list .item .item-controls {
   position: absolute;
   top: 4px;
   right: 0;
   display: flex;
   justify-content: flex-end;
 }
-.blank .items-block .items-list .item .item-controls a {
+.sarmatians-blood .items-block .items-list .item .item-controls a {
   font-size: 12px;
   text-align: center;
   margin: 0 3px;
 }
-.blank .items-block .items-list .item.active .item-name {
+.sarmatians-blood .items-block .items-list .item.active .item-name {
   font-weight: bold;
 }
 
-.blank.item input.all-width {
+.sarmatians-blood.actor .sheet-header {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 120px 1fr;
+}
+.sarmatians-blood.actor .sheet-header .profile-img {
+  height: auto;
+}
+.sarmatians-blood.actor .sheet-header .character-name {
+  font-size: x-large;
+  font-family: "Spectral SC", serif;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.sarmatians-blood.item input.all-width {
   width: 100%;
 }
-.blank.item .items-header {
+.sarmatians-blood.item .items-header {
   flex: 100px auto;
   overflow: hidden;
   display: flex;
@@ -359,33 +372,32 @@ select.clear-select {
   justify-content: flex-start;
   margin-bottom: 10px;
 }
-.blank.item .items-header .item-img {
+.sarmatians-blood.item .items-header .item-img {
   flex: 0 0 100px;
   height: 100px;
   margin-right: 10px;
   border: none;
 }
-.blank.item .items-header .header-fields {
+.sarmatians-blood.item .items-header .header-fields {
   flex: 1;
 }
-.blank.item .items-header .header-fields .item-name {
+.sarmatians-blood.item .items-header .header-fields .item-name {
   height: 35px;
   padding: 0px;
   margin: 5px 0;
   border-bottom: 0;
   font-family: "Spectral SC", serif;
-  font-weight: 700;
 }
-.blank.item .items-header .header-fields .item-name input {
+.sarmatians-blood.item .items-header .header-fields .item-name input {
   width: 100%;
   height: 100%;
   margin: 0;
 }
-.blank.item .items-header .header-fields .brief-info {
+.sarmatians-blood.item .items-header .header-fields .brief-info {
   margin-top: 10px;
 }
-.blank.item .sheet-body .editor-block {
+.sarmatians-blood.item .sheet-body .editor-block {
   flex: auto;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=sarmatians.css.map */

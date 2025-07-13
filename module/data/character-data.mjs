@@ -12,7 +12,7 @@ export default class CharacterData extends foundry.abstract.TypeDataModel {
       exp: new fields.NumberField({ requiredPositiveInteger, initial: 0 }),
       coins: new fields.NumberField({ requiredPositiveInteger, initial: 0 }),
       inventory: new fields.SchemaField({
-        used: new fields.NumberField({ requiredPositiveInteger, initial: 3 }),
+        value: new fields.NumberField({ requiredPositiveInteger, initial: 3 }),
         max: new fields.NumberField({ requiredPositiveInteger, initial: 3 }),
       }),
       description: new fields.HTMLField(),

@@ -1,27 +1,36 @@
 {
   "TYPES": {
     "Actor": {
-      "character": "Character"
+      "character": "Персонаж",
+      "monster": "Монстер"
     },
     "Item": {
-      "item": "Item"
+      "tool": "Премет"
     }
   },
-
-  "BLANK": {
+  "SARMATIANS": {
     "Actor": {
-      "Name": "Name"
+      "Name": "Ім'я",
+      "Greatness": "Велич",
+      "Exp": "Досвід",
+      "Coins": "Монети",
+      "Inventory": "Інвентар",
+      "Items": "Предмети",
+      "Notes": "Нотатки"
     },
     "Item": {
-      "Name": "Name",
-      "Show": "Show",
-      "Add": "Add",
-      "Delete": "Delete",
-      "Edit": "Edit",
-      "New": "New"
+      "Name": "Назва",
+      "Show": "Показати",
+      "Add": "Додати",
+      "Delete": "Видалити",
+      "Edit": "Відредагувати",
+      "New": "Нове"
     },
-
-    "Description": "Description",
-    "Notes": "Notes"
+    "Roll": {
+      "Title": "Кидок",
+      "Modifier": "Модифікатор",
+      "Submit": "Кинути"
+    },
+    "Description": "Опис"
   }
 }

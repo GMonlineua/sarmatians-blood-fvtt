@@ -8,13 +8,17 @@
 @import 'global/window';
 
 /* Styles limited to system sheets */
-.blank {
+.sarmatians-blood {
   font-family: $font-primary;
 
   @import 'components/forms';
   @import 'components/item-list';
 }
 
-.blank.item {
+.sarmatians-blood.actor {
+  @import 'components/actor';
+}
+
+.sarmatians-blood.item {
   @import 'components/item';
 }

@@ -11,7 +11,7 @@ export class SarmatiansActorSheet extends ActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["sarmatians-blood", "sheet", "actor"],
       width: 500,
-      height: 700,
+      height: 800,
       tabs: [{
         navSelector: ".sheet-tabs",
         contentSelector: ".sheet-body"
@@ -43,8 +43,26 @@ export class SarmatiansActorSheet extends ActorSheet {
     // Add the actor's data to context.data for easier access, as well as flags.
     context.system = context.actor.system;
     context.flags = context.actor.flags;
+    this._prepareItems(context);
 
     return context;
+  }
+
+  _prepareItems(context) {
+    // Initialize containers.
+    const item = [];
+
+    // Iterate through items, allocating to containers
+    for (let i of context.items) {
+      i.img = i.img || DEFAULT_TOKEN;
+      // Append to item.
+      if (i.type === 'tool') {
+        item.push(i);
+      }
+    }
+
+    // Assign and return
+    context.item = item;
   }
 
   /** @override */
@@ -56,7 +74,7 @@ export class SarmatiansActorSheet extends ActorSheet {
 
     // Add a custom button for roll
     buttons.unshift({
-      label: game.i18n.localize("SARMATIANS.Roll.Button"),
+      label: game.i18n.localize("SARMATIANS.Roll.Title"),
       class: "sarmatians-dice-sheet",
       icon: "fas fa-dice",
       onclick: () => new SarmatiansRollerApp().render(true),
