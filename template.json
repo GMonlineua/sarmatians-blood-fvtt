@@ -1,25 +1,17 @@
 {
   "Actor": {
-    "types": ["character"],
-    "htmlFields": ["description"],
-    "templates": {
-      "base": {
-        "description": ""
-      }
-    },
-    "character": {
-      "templates": ["base"]
-    }
+    "types": [
+      "character",
+      "monster"
+    ],
+    "htmlFields": [
+      "description",
+      "notes"
+    ]
   },
   "Item": {
-    "types": ["item"],
-    "templates": {
-      "base": {
-        "description": ""
-      }
-    },
-    "item": {
-      "templates": ["base"]
-    }
+    "types": [
+      "tool"
+    ]
   }
 }

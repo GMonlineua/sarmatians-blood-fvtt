@@ -2,7 +2,7 @@
  * Extend the base Actor entity by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
-export class BlankActor extends Actor {
+export class SarmatiansActor extends Actor {
 
   /** @inheritdoc */
   async _preCreate(data, options, user) {

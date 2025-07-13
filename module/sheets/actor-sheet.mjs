@@ -1,16 +1,17 @@
+import SarmatiansRollerApp from "../applications/roll.mjs";
+
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class BlankActorSheet extends ActorSheet
-{
+export class SarmatiansActorSheet extends ActorSheet {
 
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["blank", "sheet", "actor"],
-      width: 550,
-      height: 550,
+      classes: ["sarmatians-blood", "sheet", "actor"],
+      width: 500,
+      height: 700,
       tabs: [{
         navSelector: ".sheet-tabs",
         contentSelector: ".sheet-body"
@@ -20,7 +21,7 @@ export class BlankActorSheet extends ActorSheet
 
   /** @override */
   get template() {
-    let sheetTemplate = "systems/blank/templates/actor/actor-sheet.hbs";
+    const sheetTemplate = `systems/sarmatians-blood/templates/actor/${this.actor.type}-sheet.hbs`;
 
     return sheetTemplate
   }
@@ -33,32 +34,37 @@ export class BlankActorSheet extends ActorSheet
     context.enrichedDescription = await TextEditor.enrichHTML(this.object.system.description, {
       async: true,
       secrets: this.actor.isOwner
-    })
+    });
+    context.enrichedNotes = await TextEditor.enrichHTML(this.object.system.notes, {
+      async: true,
+      secrets: this.actor.isOwner
+    });
 
     // Add the actor's data to context.data for easier access, as well as flags.
     context.system = context.actor.system;
     context.flags = context.actor.flags;
-    this._prepareItems(context);
 
     return context;
   }
 
-  _prepareItems(context) {
-    // Initialize containers.
-    const item = [];
+  /** @override */
+  _getHeaderButtons() {
+    // Get the default buttons from the parent class
+    const buttons = super._getHeaderButtons();
 
-    // Iterate through items, allocating to containers
-    for (let i of context.items) {
-      i.img = i.img || DEFAULT_TOKEN;
-      // Append to item.
-      if (i.type === 'item') {
-        item.push(i);
-      }
-    }
+    if (!this.actor.testUserPermission(game.user, "OWNER")) return buttons;
 
-    // Assign and return
-    context.item = item;
+    // Add a custom button for roll
+    buttons.unshift({
+      label: game.i18n.localize("SARMATIANS.Roll.Button"),
+      class: "sarmatians-dice-sheet",
+      icon: "fas fa-dice",
+      onclick: () => new SarmatiansRollerApp().render(true),
+    });
+
+    return buttons;
   }
+
 
   /** @override */
   activateListeners(html) {
@@ -104,19 +110,6 @@ export class BlankActorSheet extends ActorSheet
       const item = this.actor.items.get(li?.dataset.itemId);
       return item.delete();
     });
-
-    // Roll dice
-    html.find('.rollable').click(this._onRoll.bind(this));
-
-    // Drag events for macros
-    if (this.actor.isOwner) {
-      let handler = ev => this._onDragStart(ev);
-      html.find('li.item').each((i, li) => {
-        if (li.classList.contains("inventory-header")) return;
-        li.setAttribute("draggable", true);
-        li.addEventListener("dragstart", handler, false);
-      });
-    }
   }
 
   /* -------------------------------------------- */
@@ -142,28 +135,6 @@ export class BlankActorSheet extends ActorSheet
     delete itemData.data["type"];
 
     const cls = getDocumentClass("Item");
-    return cls.create(itemData, {parent: this.actor});
-  }
-
-  /**
-   * Handle clickable rolls.
-   * @param {Event} the originating click event
-   * @private
-   */
-  _onRoll(event) {
-    event.preventDefault();
-    const element = event.currentTarget;
-    const dataset = element.dataset;
-
-    // Handle rolls that supply the formula directly.
-    if (dataset.roll) {
-      let roll = new Roll(dataset.roll, this.actor.getRollData());
-      roll.toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label,
-        rollMode: game.settings.get('core', 'rollMode')
-      });
-      return roll;
-    }
+    return cls.create(itemData, { parent: this.actor });
   }
 }

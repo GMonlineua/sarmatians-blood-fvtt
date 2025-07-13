@@ -1,12 +1,12 @@
 {
-  "id": "blank",
-  "title": "Blank System",
-  "description": "Blank game system by GMonline",
-  "version": "1.2",
+  "id": "sarmatians-blood",
+  "title": "Кров Сарматів",
+  "description": "Система для Крові Сарматів (автор: darkmentat) від GMonline",
+  "version": "0.1",
   "compatibility": {
-    "minimum": "11",
-    "verified": "12",
-    "maximum": "12"
+    "minimum": "13",
+    "verified": "13",
+    "maximum": "13"
   },
   "authors": [
     {
@@ -17,10 +17,10 @@
     }
   ],
   "esmodules": [
-    "module/esmodules.mjs"
+    "module/sarmatians.mjs"
   ],
   "styles": [
-    "css/style.css"
+    "css/sarmatians.css"
   ],
   "languages": [
     {
@@ -34,9 +34,11 @@
       "path": "lang/uk.json"
     }
   ],
+  "background": "systems/sarmatians-blood/ui/background.jpg",
   "socket": true,
-  "url": "https://github.com/GMonlineua/blank-system-fvtt",
-  "manifest": "https://raw.githubusercontent.com/GMonlineua/blank-system-fvtt/main/system.json",
-  "download": "https://github.com/GMonlineua/blank-system-fvtt/zip/refs/heads/main",
-  "license": "https://github.com/GMonlineua/blank-system-fvtt/blob/main/LICENSE.md"
+  "packFolders": [],
+  "url": "https://github.com/GMonlineua/sarmatians-blood-fvtt",
+  "manifest": "https://raw.githubusercontent.com/GMonlineua/sarmatians-blood-fvtt/main/system.json",
+  "download": "https://github.com/GMonlineua/sarmatians-blood-fvtt/releases/download/v0.1/foundry.zip",
+  "license": "https://github.com/GMonlineua/sarmatians-blood-fvtt/blob/main/LICENSE.md"
 }

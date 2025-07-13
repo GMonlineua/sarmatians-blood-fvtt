@@ -2,12 +2,12 @@
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
  */
-export class BlankItemSheet extends ItemSheet {
+export class SarmatiansItemSheet extends ItemSheet {
 
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["blank", "sheet", "item"],
+      classes: ["sarmatians-blood", "sheet", "item"],
       width: 450,
       height: 450,
       tabs: [{
@@ -19,7 +19,7 @@ export class BlankItemSheet extends ItemSheet {
 
   /** @override */
   get template() {
-    return "systems/blank/templates/item/item-sheet.hbs";
+    return "systems/sarmatians-blood/templates/item/item-sheet.hbs";
   }
 
   /* -------------------------------------------- */
@@ -40,7 +40,7 @@ export class BlankItemSheet extends ItemSheet {
     }
 
     // Encrich editor content
-    context.enrichedDescription = await TextEditor.enrichHTML(this.object.system.description, {async: true})
+    context.enrichedDescription = await TextEditor.enrichHTML(this.object.system.description, { async: true })
 
     // Add the actor's data to context.data for easier access, as well as flags.
     context.system = itemData.system;
